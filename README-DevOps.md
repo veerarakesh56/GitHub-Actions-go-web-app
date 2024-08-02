@@ -10,7 +10,7 @@ DevOps practices include the following:
 - Continuous Deployment (CD)
 
 ## Summary Diagram
-![alt text](<summary diagram.png>)
+![summary diagram](https://github.com/user-attachments/assets/a2c0655f-3423-42e1-ae89-96c6460cd36b)
 
 ## Creating Dockerfile (Multi-stage build)
 
