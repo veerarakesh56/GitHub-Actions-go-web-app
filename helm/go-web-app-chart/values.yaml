@@ -8,7 +8,7 @@ image:
   repository: rakeshf5/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10238565213"
+  tag: "10238930519"
 
 ingress:
   enabled: false
