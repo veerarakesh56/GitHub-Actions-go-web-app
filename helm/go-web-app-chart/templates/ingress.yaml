@@ -1,20 +1,22 @@
-# Ingress resource for the application
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: go-web-app
+  name: argocd-ingress
+  namespace: argocd
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "nginx"
+    alb.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 spec:
   rules:
-  - host: go-web-app.local
-    http:
-      paths: 
-      - path: /
-        pathType: Prefix
+  - http:
+      paths:
+      - pathType: Prefix
+        path: /
         backend:
           service:
-            name: go-web-app
+            name: argocd-server
             port:
-              number: 80
-
+              name: http
+  host: argo.org.local
