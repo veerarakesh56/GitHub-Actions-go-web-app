@@ -1,5 +1,8 @@
 # GitHub-Actions-go-web-app
 
+![Diagram](https://github.com/user-attachments/assets/0923729f-ff31-4b51-8646-b1fc1f41f4c9)
+
+
 This is a simple website written in Golang. It uses the `net/http` package to serve HTTP requests.
 
 ## Running the server
